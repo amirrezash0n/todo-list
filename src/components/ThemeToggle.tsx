@@ -27,9 +27,9 @@ export default function ThemeToggle() {
       aria-label="Toggle theme"
     >
       {theme === "light" ? (
-        <LuMoon className={`${baseClasses} text-gray-700`} />
+        <LuMoon className={`${baseClasses} text-dark`} />
       ) : (
-        <LuSun className={`${baseClasses} text-yellow-400`} />
+        <LuSun className={`${baseClasses} text-white`} />
       )}
     </button>
   );

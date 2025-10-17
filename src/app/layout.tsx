@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Lato } from "next/font/google";
 import { ThemeProvider } from "../providers/ThemeProvider";
+import Sidebar from "../components/Sidebar";
+import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lato = Lato({
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -25,10 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className={`${lato.className} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="flex min-h-screen">
+            <Sidebar />
+            <main className="flex-1 lg:ml-0">{children}</main>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

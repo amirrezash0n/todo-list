@@ -1,19 +1,18 @@
-import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-800">
       <Header />
-      <main className="flex-1">
-        {/* محتوای اصلی اینجا قرار می‌گیره */}
-        <div className="max-w-md mx-auto mt-8 p-4">
-          <h2 className="text-center text-gray-500 dark:text-gray-400">
+      <div className="max-w-4xl mx-auto p-4">
+        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-sm p-6">
+          <h2 className="text-center text-gray-600 dark:text-gray-400">
             محتوای اصلی به زودی اضافه می‌شود...
           </h2>
+          {/* اینجا بعداً کامپوننت‌های Todo رو اضافه می‌کنی */}
         </div>
-      </main>
+      </div>
       <Footer />
     </div>
   );
