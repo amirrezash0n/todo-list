@@ -15,5 +15,6 @@
 }
 
 @theme {
-    --color-dark: "#101828"
+    --color-dark: "#101828";
+    --color-light: "#F3F4F6"
 }
